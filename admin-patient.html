@@ -1,0 +1,576 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+        rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <title>Admin Portal</title>
+    <link rel="stylesheet" href="admin-profile.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css">
+
+
+</head>
+
+<body>
+    <div class="main">
+        <div class="menu" style="height:60pc;">
+            <h2 id="logo"><i class="bi bi-person-circle"></i> Admin</h2>
+            <a href="admin.html"><i class="bi bi-cloud-fill"></i> Dashboard</a>
+            <a href="admin-offlinebook.html"><i class="bi bi-receipt-cutoff"></i> Offilne Booking</a>
+      <a href="admin-doctor.html"><i class="bi bi-person-fill"></i> Doctor</a>
+      <a href="admin-patient.html"><i class="bi bi-bandaid-fill"></i> Out-Patient</a>
+      <a href="admin-inpatient.html"><i class="bi bi-bandaid-fill"></i> In-Patient</a>
+      <a href="admin-room.html"><i class="bi bi-house-door-fill"></i> Rooms</a>
+      <a href="admin-sch.html"><i class="bi bi-calendar-check-fill"></i> Doctor Schedule</a>
+      <a href="admin-appoint.html"><i class="bi bi-journal-check"></i> Appointment</a>
+      <a href="admin-profile.html"><i class="bi bi-person-video2"></i> Profile</a>
+        </div>
+
+        <div class="body">
+            <nav class="admin-part" style="background-color: #1977cc; padding: 10px;">
+                <ul class="nav justify-content-end">
+                    
+                    <li class="nav-item">
+                        <a  href="index.html"><button type="button" class="btn btn-danger btn-lg"><i class="bi bi-box-arrow-right" style="color: white;"></i> Logout</button></a>
+                    </li>
+            </nav>
+
+            <section id="dashboard">
+                <div class="container">
+                    <div class="title" style="margin-left: -20px;">
+                        <h1>Out-Patient Management</h1>
+                    </div>
+                </div>
+            </section>
+
+            <div class="doc-table">
+                <div class="jumbotron">
+                    <div class="card" style="width:1000px;height:640px;margin-left:45px">
+                        <div class="card-header" style="font-weight: 700;text-align: left;">
+                            Patient List
+                                            
+                        </div>
+                        <div class="card-body">
+                            
+                            <table class="table table-hover table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Name</th>
+                                        <th scope="col">Attending Doctor</th>
+                                        <th scope="col">Email Address</th>
+                                        <th scope="col">Phone No.</th>
+                                        <th scope="col">View Details</th>
+                                        <th scope="col">Action</th>
+                                        
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Shivani Kumari</td>
+                                        <td>Dr. Anu Saini</td>
+                                        <td>sivanisah123@gmail.com</td>
+                                        <td>+91 8012739137</td>
+                                        
+                                        <td>
+                                            <button type="button" class="btn btn-info btn-sm" data-bs-toggle="modal"
+                                            data-bs-target="#staticBackdrop">
+                                            <i class="bi bi-eye-slash"></i>
+                                        </button>
+
+                                        <!-- Modal -->
+                                        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static"
+                                            data-bs-keyboard="false" tabindex="-1"
+                                            aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                                            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title" id="staticBackdropLabel">Patient
+                                                            Details
+                                                        </h5>
+                                                        <button type="button" class="btn-close"
+                                                            data-bs-dismiss="modal" aria-label="Close"></button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <table class="table table-borderless table-sm"
+                                                            style="text-align: left;">
+
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td>Patient Name:</td>
+                                                                    <td>Shivani Kumari</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Attending Doctor</td>
+                                                                    <td>Dr. Anu Saini</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Email Address</td>
+                                                                    <td>sivanisah123@gmail.com</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Email Address Verification</td>
+                                                                    <td>Yes</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Phone No.</td>
+                                                                    <td>+91 8012739137</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Age</td>
+                                                                    <td>24</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Gender</td>
+                                                                    <td>Female</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Referred Case</td>
+                                                                    <td>No</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Last Visit</td>
+                                                                    <td>2021-12-02</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Payment Due</td>
+                                                                    <td>Nil</td>
+                                                                </tr>
+
+
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                    <div class="modal-footer">
+
+                                                        
+                                                        <button type="button" class="btn btn-primary btn-sm">Edit</button>
+                                                            
+                                                        <button type="button" class="btn btn-secondary btn-sm"
+                                                            data-bs-dismiss="modal">Close</button>
+                                                    </div>
+                                        </td>
+                                        <td>
+                                            
+                                            
+                                            <button type="button" class="btn btn-danger btn-sm"><i
+                                                    class="bi bi-x-circle-fill"></i></button>
+                                        </td>
+                                    </tr>
+                                    <td>Ayush Kumar</td>
+                                    <td>Dr. Dev Kataria</td>
+                                    <td>kumaayush@gmail.com</td>
+                                    <td>+91 9390611284</td>
+                                    
+                                    <td>
+                                        <button type="button" class="btn btn-info btn-sm" data-bs-toggle="modal"
+                                            data-bs-target="#staticBackdrop1">
+                                            <i class="bi bi-eye-slash"></i>
+                                        </button>
+
+                                        <!-- Modal -->
+                                        <div class="modal fade" id="staticBackdrop1" data-bs-backdrop="static"
+                                            data-bs-keyboard="false" tabindex="-1"
+                                            aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                                            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title" id="staticBackdropLabel">Patient
+                                                            Details
+                                                        </h5>
+                                                        <button type="button" class="btn-close"
+                                                            data-bs-dismiss="modal" aria-label="Close"></button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <table class="table table-borderless table-sm"
+                                                            style="text-align: left;">
+
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td>Patient Name:</td>
+                                                                    <td>Ayush Kumar</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Attending Doctor</td>
+                                                                    <td>Dr. Dev Kataria</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Email Address</td>
+                                                                    <td>kumaayush@gmail.com</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Email Address Verification</td>
+                                                                    <td>No</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Phone No.</td>
+                                                                    <td>+91 9390611284</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Age</td>
+                                                                    <td>41</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Gender</td>
+                                                                    <td>Male</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Referred Case</td>
+                                                                    <td>Dr. Anushka Pandey</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Last Visit</td>
+                                                                    <td>2021-10-29</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Payment Due</td>
+                                                                    <td>Rs.530</td>
+                                                                </tr>
+
+
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                    <div class="modal-footer">
+
+                                                        
+                                                        <button type="button" class="btn btn-primary btn-sm">Edit</button>
+                                                            
+                                                        <button type="button" class="btn btn-secondary btn-sm"
+                                                            data-bs-dismiss="modal">Close</button>
+                                                    </div>
+                                    </td>
+                                    <td>
+                                        
+                                        
+                                        <button type="button" class="btn btn-danger btn-sm"><i
+                                                class="bi bi-x-circle-fill"></i></button>
+                                    </td>
+                                    <tr>
+                                        <td>Saksham Katiyar</td>
+                                        <td>Dr. Shivaditya Singh</td>
+                                        <td>s_12kati@gmail.com</td>
+                                        <td>+91 7565032967</td>
+                                        
+                                        <td>
+                                            <button type="button" class="btn btn-info btn-sm" data-bs-toggle="modal"
+                                            data-bs-target="#staticBackdrop2">
+                                            <i class="bi bi-eye-slash"></i>
+                                        </button>
+
+                                        <!-- Modal -->
+                                        <div class="modal fade" id="staticBackdrop2" data-bs-backdrop="static"
+                                            data-bs-keyboard="false" tabindex="-1"
+                                            aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                                            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title" id="staticBackdropLabel">Patient
+                                                            Details
+                                                        </h5>
+                                                        <button type="button" class="btn-close"
+                                                            data-bs-dismiss="modal" aria-label="Close"></button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <table class="table table-borderless table-sm"
+                                                            style="text-align: left;">
+
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td>Patient Name:</td>
+                                                                    <td>Saksham Katiyar</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Attending Doctor</td>
+                                                                    <td>Dr. Shivaditya Singh</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Email Address</td>
+                                                                    <td>s_12kati@gmail.com</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Email Address Verification</td>
+                                                                    <td>No</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Phone No.</td>
+                                                                    <td>+91 7565032967</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Age</td>
+                                                                    <td>32</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Gender</td>
+                                                                    <td>Male</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Referred Case</td>
+                                                                    <td>No</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Last Visit</td>
+                                                                    <td>2021-11-09</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Payment Due</td>
+                                                                    <td>Nil</td>
+                                                                </tr>
+
+
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                    <div class="modal-footer">
+
+                                                        
+                                                        <button type="button" class="btn btn-primary btn-sm">Edit</button>
+                                                            
+                                                        <button type="button" class="btn btn-secondary btn-sm"
+                                                            data-bs-dismiss="modal">Close</button>
+                                                    </div>
+                                        </td>
+                                        <td>
+                                            
+                                            
+                                            <button type="button" class="btn btn-danger btn-sm"><i
+                                                    class="bi bi-x-circle-fill"></i></button>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Jhanvi Gautam</td>
+                                        <td>Dr. Anu Saini</td>
+                                        <td>j.gautam@gmail.com</td>
+                                        <td>+91 8792028510</td>
+                                        
+                                        <td>
+                                            <button type="button" class="btn btn-info btn-sm" data-bs-toggle="modal"
+                                            data-bs-target="#staticBackdrop3">
+                                            <i class="bi bi-eye-slash"></i>
+                                        </button>
+
+                                        <!-- Modal -->
+                                        <div class="modal fade" id="staticBackdrop3" data-bs-backdrop="static"
+                                            data-bs-keyboard="false" tabindex="-1"
+                                            aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                                            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title" id="staticBackdropLabel">Patient
+                                                            Details
+                                                        </h5>
+                                                        <button type="button" class="btn-close"
+                                                            data-bs-dismiss="modal" aria-label="Close"></button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <table class="table table-borderless table-sm"
+                                                            style="text-align: left;">
+
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td>Patient Name:</td>
+                                                                    <td>Jhanvi Gautam</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Attending Doctor</td>
+                                                                    <td>Dr. Anu Saini</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Email Address</td>
+                                                                    <td>j.gautam@gmail.com</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Email Address Verification</td>
+                                                                    <td>Yes</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Phone No.</td>
+                                                                    <td>+91 8792028510</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Age</td>
+                                                                    <td>22</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Gender</td>
+                                                                    <td>Female</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Referred Case</td>
+                                                                    <td>Dr. Mark Tyson</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Last Visit</td>
+                                                                    <td>2021-09-22</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Payment Due</td>
+                                                                    <td>Nil</td>
+                                                                </tr>
+
+
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                    <div class="modal-footer">
+
+                                                        
+                                                        <button type="button" class="btn btn-primary btn-sm">Edit</button>
+                                                            
+                                                        <button type="button" class="btn btn-secondary btn-sm"
+                                                            data-bs-dismiss="modal">Close</button>
+                                                    </div>
+                                        </td>
+                                        <td>
+                                            
+                                            
+                                            <button type="button" class="btn btn-danger btn-sm"><i
+                                                    class="bi bi-x-circle-fill"></i></button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Sakshi Dubey</td>
+                                        <td>Dr. Mark Tyson</td>
+                                        <td>dubey68@gmail.com</td>
+                                        <td>+91 8105014812</td>
+                                        
+                                        <td>
+                                            <button type="button" class="btn btn-info btn-sm"><i class="bi bi-eye-slash"></i></button>
+                                        
+                                        </td>
+                                        <td>
+                                            
+                                            
+                                            <button type="button" class="btn btn-danger btn-sm"><i
+                                                    class="bi bi-x-circle-fill"></i></button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Joy Joseph</td>
+                                        <td>Dr. Dev Kataria</td>
+                                        <td>joy4u@gmail.com</td>
+                                        <td>+91 9995820210</td>
+                                        
+                                        <td>
+                                            <button type="button" class="btn btn-info btn-sm"><i class="bi bi-eye-slash"></i></button>
+                                        </td>
+                                        <td>
+                                            
+                                            
+                                            <button type="button" class="btn btn-danger btn-sm"><i
+                                                    class="bi bi-x-circle-fill"></i></button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Kaushiki Mishra</td>
+                                        <td>Dr. Anu Saini</td>
+                                        <td>kaushm@gmail.com</td>
+                                        <td>+91 9951039342</td>
+                                        
+                                        <td>
+                                            <button type="button" class="btn btn-info btn-sm"><i class="bi bi-eye-slash"></i></button>
+                                        </td>
+                                        <td>
+                                            
+                                            
+                                            <button type="button" class="btn btn-danger btn-sm"><i
+                                                    class="bi bi-x-circle-fill"></i></button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Paritosh Joshi</td>
+                                        <td>Dr. Lakshmi Iyer</td>
+                                        <td>p_josi@yahoo.com</td>
+                                        <td>+91 8405355582</td>
+                                        
+                                        <td>
+                                            <button type="button" class="btn btn-info btn-sm"><i class="bi bi-eye-slash"></i></button>
+                                        </td>
+                                        <td>
+                                            
+                                            
+                                            <button type="button" class="btn btn-danger btn-sm"><i
+                                                    class="bi bi-x-circle-fill"></i></button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Akash Gupta</td>
+                                        <td>Dr. Shivaditya Singh</td>
+                                        <td>skygupta@gmail.com</td>
+                                        <td>+91 7932027490</td>
+                                        
+                                        <td>
+                                            <button type="button" class="btn btn-info btn-sm"><i class="bi bi-eye-slash"></i></button>
+                                        </td>
+                                        <td>
+                                            
+                                            
+                                            <button type="button" class="btn btn-danger btn-sm"><i
+                                                    class="bi bi-x-circle-fill"></i></button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Tripti Sharma</td>
+                                        <td>Dr. Anu Saini</td>
+                                        <td>tripti.3@gmail.com</td>
+                                        <td>+91 77343013546</td>
+                                        
+                                        <td>
+                                            <button type="button" class="btn btn-info btn-sm"><i class="bi bi-eye-slash"></i></button>
+                                        </td>
+                                        <td>
+                                            
+                                            
+                                            <button type="button" class="btn btn-danger btn-sm"><i
+                                                    class="bi bi-x-circle-fill"></i></button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="footer">
+                            <p class="showing" style="font-size: 15px; margin-top: -17px; text-align: left; margin-left: 15px;">Showing 10 of 50 entries</p>
+                            <div class="footer-buttons" style="float: right;margin-top: -40px;margin-right: 15px;">
+                                <div class="btn-group" role="group" aria-label="Basic example">
+                                    <button type="button" class="btn btn-secondary btn-sm">Previous</button>
+                                    <button type="button" class="btn btn-primary btn-sm">1</button>
+                                    <button type="button" class="btn btn-secondary btn-sm">Next</button>
+                                  </div>
+                            </div>
+                        </div>
+                    </div><br>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    -->
+
+</body>
+
+</html>

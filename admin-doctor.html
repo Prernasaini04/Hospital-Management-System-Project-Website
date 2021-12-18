@@ -1,0 +1,1002 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+        rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <title>Admin Portal</title>
+    <link rel="stylesheet" href="admin-profile.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css">
+
+
+</head>
+
+<body>
+    <div class="main">
+        <div class="menu" style="height:60pc;">
+            <h2 id="logo"><i class="bi bi-person-circle"></i> Admin</h2>
+            <a href="admin.html"><i class="bi bi-cloud-fill"></i> Dashboard</a>
+            <a href="admin-offlinebook.html"><i class="bi bi-receipt-cutoff"></i> Offilne Booking</a>
+            <a href="admin-doctor.html"><i class="bi bi-person-fill"></i> Doctor</a>
+            <a href="admin-patient.html"><i class="bi bi-bandaid-fill"></i> Out-Patient</a>
+            <a href="admin-inpatient.html"><i class="bi bi-bandaid-fill"></i> In-Patient</a>
+            <a href="admin-room.html"><i class="bi bi-house-door-fill"></i> Rooms</a>
+            <a href="admin-sch.html"><i class="bi bi-calendar-check-fill"></i> Doctor Schedule</a>
+            <a href="admin-appoint.html"><i class="bi bi-journal-check"></i> Appointment</a>
+            <a href="admin-profile.html"><i class="bi bi-person-video2"></i> Profile</a>
+        </div>
+
+        <div class="body">
+            <nav class="admin-part" style="background-color: #1977cc; padding: 10px;">
+                <ul class="nav justify-content-end">
+
+                    <li class="nav-item">
+                        <a href="index.html"><button type="button" class="btn btn-danger btn-lg"><i
+                                    class="bi bi-box-arrow-right" style="color: white;"></i> Logout</button></a>
+                    </li>
+            </nav>
+
+            <section id="dashboard">
+                <div class="container">
+                    <div class="title" style="margin-left: -20px;">
+                        <h1>Doctor Management</h1>
+                    </div>
+                </div>
+            </section>
+
+            <div class="doc-table">
+                <div class="jumbotron">
+                    <div class="card" style="width:1000px;height:730px;margin-left:45px">
+                        <div class="card-header" style="font-weight: 700;text-align: left;">
+                            Doctors List
+
+
+                            <!-- Button trigger modal -->
+                            <button type="button" class="btn btn-success rounded-pill btn-sm" data-bs-toggle="modal"
+                                data-bs-target="#staticBackdrop" style="float: right;">
+                                <i class="bi bi-plus-circle-fill"></i>
+                            </button>
+
+                            <!-- Modal -->
+                            <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static"
+                                data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel"
+                                aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="staticBackdropLabel">Add</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="mb-3">
+                                                <label for="exampleFormControlInput1" class="form-label">Name</label>
+                                                <input type="text" class="form-control" id="exampleFormControlInput1"
+                                                    placeholder="Full Name" style="font-size: 12px;">
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="exampleFormControlInput2" class="form-label">Email
+                                                    Address</label>
+                                                <input type="email" class="form-control" id="exampleFormControlInput2"
+                                                    placeholder="name@example.com" style="font-size: 12px;">
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="exampleFormControlInput3"
+                                                    class="form-label">Password</label>
+                                                <input type="password" class="form-control"
+                                                    id="exampleFormControlInput3" placeholder="password"
+                                                    style="font-size: 12px;">
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="exampleFormControlInput4" class="form-label">Contact
+                                                    No.</label>
+                                                <input type="text" class="form-control" id="exampleFormControlInput4"
+                                                    placeholder="Phone No." style="font-size: 12px;">
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="exampleFormControlTextarea1"
+                                                    class="form-label">Address</label>
+                                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
+                                                    placeholder="Full Address" style="font-size: 12px;"></textarea>
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="exampleFormControlInput5" class="form-label">Date of
+                                                    Birth</label>
+                                                <input type="text" class="form-control" id="exampleFormControlInput5"
+                                                    placeholder="DD-MM-YYYY" style="font-size: 12px;">
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="exampleFormControlInput6" class="form-label">Degree</label>
+                                                <input type="text" class="form-control" id="exampleFormControlInput6"
+                                                    placeholder="Degree" style="font-size: 12px;">
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="exampleFormControlInput7"
+                                                    class="form-label">Speciality</label>
+                                                <input type="text" class="form-control" id="exampleFormControlInput7"
+                                                    placeholder="Specialisation" style="font-size: 12px;">
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="formFile" class="form-label">Upload Image</label>
+                                                <input class="form-control" type="file" id="formFile"
+                                                    style="font-size: 12px;">
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary btn-sm"
+                                                data-bs-dismiss="modal">Close</button>
+                                            <button type="button" class="btn btn-primary btn-sm">Submit</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body">
+
+                            <table class="table table-hover table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Image</th>
+                                        <th scope="col">Email Address</th>
+                                        <th scope="col">Name</th>
+                                        <th scope="col">Phone No.</th>
+                                        <th scope="col">Speciality</th>
+                                        <th scope="col">Status</th>
+                                        <th scope="col">Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><img src="mark.jpg" class="card-img-top" style="width: 40px;height: 40px;">
+                                        </td>
+                                        <td>mark123@gmail.com</td>
+                                        <td>Mark Tyson</td>
+                                        <td>+91 9032759137</td>
+                                        <td>Neurosurgery</td>
+                                        <td>
+                                            <button type="button" class="btn btn-primary btn-sm">Active</button>
+                                        </td>
+                                        <td>
+                                            <button type="button" class="btn btn-info btn-sm" data-bs-toggle="modal"
+                                                data-bs-target="#staticBackdropdoc">
+                                                <i class="bi bi-eye-slash"></i>
+                                            </button>
+
+                                            <!-- Modal -->
+                                            <div class="modal fade" id="staticBackdropdoc" data-bs-backdrop="static"
+                                                data-bs-keyboard="false" tabindex="-1"
+                                                aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                                                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <h5 class="modal-title" id="staticBackdropLabel">Doctor
+                                                                Details
+                                                            </h5>
+                                                            <button type="button" class="btn-close"
+                                                                data-bs-dismiss="modal" aria-label="Close"></button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            <img src="mark.jpg" class="card-img-top" style="width: 100px;height: 100px; margin-bottom: 15px;">
+                                                            
+                                                            <table class="table table-borderless table-sm"
+                                                                style="text-align: left;">
+
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td>Doctor Name:</td>
+                                                                        <td>Mark Tyson</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>Email address:</td>
+                                                                        <td>mark123@gmail.com</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>Phone no:</td>
+                                                                        <td>+91 9032759137</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>Date of Birth:</td>
+                                                                        <td>1985-06-26</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>Degree:</td>
+                                                                        <td>MBBS MS (Neurosurgery)</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>Speciality</td>
+                                                                        <td>Neurosurgery</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>Salary</td>
+                                                                        <td>Rs.80,000</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>Days Available:</td>
+                                                                        <td>Thursday, Saturday, Sunday</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>Appointments Pending:</td>
+                                                                        <td>8</td>
+                                                                    </tr>
+                                                                    
+                                                                    </tr>
+
+
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                        <div class="modal-footer">
+
+                                                            <button type="button"
+                                                                class="btn btn-danger btn-sm">Inactive</button>
+                                                            <button type="button" class="btn btn-secondary btn-sm"
+                                                                data-bs-dismiss="modal">Close</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                                    <button type="button" class="btn btn-warning btn-sm" data-bs-toggle="modal"
+                                                    data-bs-target="#staticBackdrop1">
+                                                    <i
+                                                    class="bi bi-pencil-square"></i></i>
+                                                </button>
+                    
+                                                <!-- Modal -->
+                                                <div class="modal fade" id="staticBackdrop1" data-bs-backdrop="static"
+                                                    data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel"
+                                                    aria-hidden="true">
+                                                    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                                                        <div class="modal-content">
+                                                            <div class="modal-header">
+                                                                <h5 class="modal-title" id="staticBackdropLabel">Edit Details</h5>
+                                                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                                    aria-label="Close"></button>
+                                                            </div>
+                                                            <div class="modal-body"z style="text-align: left;">
+                                                                <div class="mb-3">
+                                                                    <label for="exampleFormControlInput1" class="form-label">Name</label>
+                                                                    <input type="text" class="form-control" id="exampleFormControlInput1"
+                                                                        placeholder="Mark Tyson" style="font-size: 12px;">
+                                                                </div>
+                                                                <div class="mb-3">
+                                                                    <label for="exampleFormControlInput2" class="form-label">Email
+                                                                        Address</label>
+                                                                    <input type="email" class="form-control" id="exampleFormControlInput2"
+                                                                        placeholder="mark123@gmail.com" style="font-size: 12px;">
+                                                                </div>
+                                                                <div class="mb-3">
+                                                                    <label for="exampleFormControlInput3"
+                                                                        class="form-label">Password</label>
+                                                                    <input type="password" class="form-control"
+                                                                        id="exampleFormControlInput3" placeholder="mtyson123"
+                                                                        style="font-size: 12px;">
+                                                                </div>
+                                                                <div class="mb-3">
+                                                                    <label for="exampleFormControlInput4" class="form-label">Contact
+                                                                        No.</label>
+                                                                    <input type="text" class="form-control" id="exampleFormControlInput4"
+                                                                        placeholder="+91 9032759137" style="font-size: 12px;">
+                                                                </div>
+                                                                <div class="mb-3">
+                                                                    <label for="exampleFormControlTextarea1"
+                                                                        class="form-label">Address</label>
+                                                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
+                                                                        placeholder="293,DDA flats,Manglapuri,Palam,New Delhi, 110075" style="font-size: 12px;"></textarea>
+                                                                </div>
+                                                                <div class="mb-3">
+                                                                    <label for="exampleFormControlInput5" class="form-label">Date of
+                                                                        Birth</label>
+                                                                    <input type="text" class="form-control" id="exampleFormControlInput5"
+                                                                        placeholder="1985-06-26" style="font-size: 12px;">
+                                                                </div>
+                                                                <div class="mb-3">
+                                                                    <label for="exampleFormControlInput6" class="form-label">Degree</label>
+                                                                    <input type="text" class="form-control" id="exampleFormControlInput6"
+                                                                        placeholder="MBBS MS (Neurosurgery)" style="font-size: 12px;">
+                                                                </div>
+                                                                <div class="mb-3">
+                                                                    <label for="exampleFormControlInput7"
+                                                                        class="form-label">Speciality</label>
+                                                                    <input type="text" class="form-control" id="exampleFormControlInput7"
+                                                                        placeholder="Neurosurgery" style="font-size: 12px;">
+                                                                </div>
+                                                                <div class="mb-3">
+                                                                    <label for="formFile" class="form-label">Upload Image</label>
+                                                                    <input class="form-control" type="file" id="formFile"
+                                                                        style="font-size: 12px;">
+                                                                </div>
+                                                            </div>
+                                                            <div class="modal-footer">
+                                                                <button type="button" class="btn btn-secondary btn-sm"
+                                                                    data-bs-dismiss="modal">Close</button>
+                                                                <button type="button" class="btn btn-primary btn-sm">Submit</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            <button type="button" class="btn btn-danger btn-sm"><i
+                                                    class="bi bi-x-circle-fill"></i></button>
+                                        </td>
+                                    </tr>
+                                    <td><img src="anushka.jpg" class="card-img-top" style="width: 40px;height: 40px;">
+                                    </td>
+                                    <td>anush24aug@gmail.com</td>
+                                    <td>Anushka Pandey</td>
+                                    <td>+91 7394601284</td>
+                                    <td>General Physician</td>
+                                    <td>
+                                        <button type="button" class="btn btn-secondary btn-sm">Inactive</button>
+                                    </td>
+                                    <td>
+                                        <button type="button" class="btn btn-info btn-sm" data-bs-toggle="modal"
+                                                data-bs-target="#staticBackdropdoc1">
+                                                <i class="bi bi-eye-slash"></i>
+                                            </button>
+
+                                            <!-- Modal -->
+                                            <div class="modal fade" id="staticBackdropdoc1" data-bs-backdrop="static"
+                                                data-bs-keyboard="false" tabindex="-1"
+                                                aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                                                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <h5 class="modal-title" id="staticBackdropLabel">Doctor
+                                                                Details
+                                                            </h5>
+                                                            <button type="button" class="btn-close"
+                                                                data-bs-dismiss="modal" aria-label="Close"></button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            <img src="anushka.jpg" class="card-img-top" style="width: 100px;height: 100px; margin-bottom: 15px;">
+                                                            
+                                                            <table class="table table-borderless table-sm"
+                                                                style="text-align: left;">
+
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td>Doctor Name:</td>
+                                                                        <td>Anushka Pandey</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>Email address:</td>
+                                                                        <td>anush24aug@gmail.com</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>Phone no:</td>
+                                                                        <td>+91 7394601284</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>Date of Birth:</td>
+                                                                        <td>1992-07-21</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>Degree:</td>
+                                                                        <td>MBBS</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>Speciality</td>
+                                                                        <td>General Physician</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>Salary</td>
+                                                                        <td>Rs.30,000</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>Days Available:</td>
+                                                                        <td>Inactive</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>Appointments Pending:</td>
+                                                                        <td>Nil</td>
+                                                                    </tr>
+                                                                    
+                                                                    </tr>
+
+
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                        <div class="modal-footer">
+
+                                                            <button type="button"
+                                                                class="btn btn-primary btn-sm">Active</button>
+                                                            <button type="button" class="btn btn-secondary btn-sm"
+                                                                data-bs-dismiss="modal">Close</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                            <button type="button" class="btn btn-warning btn-sm" data-bs-toggle="modal"
+                                            data-bs-target="#staticBackdrop2">
+                                            <i
+                                            class="bi bi-pencil-square"></i></i>
+                                        </button>
+            
+                                        <!-- Modal -->
+                                        <div class="modal fade" id="staticBackdrop2" data-bs-backdrop="static"
+                                            data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel"
+                                            aria-hidden="true">
+                                            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title" id="staticBackdropLabel">Edit Details</h5>
+                                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                            aria-label="Close"></button>
+                                                    </div>
+                                                    <div class="modal-body"z style="text-align: left;">
+                                                        <div class="mb-3">
+                                                            <label for="exampleFormControlInput1" class="form-label">Name</label>
+                                                            <input type="text" class="form-control" id="exampleFormControlInput1"
+                                                                placeholder="Anushka Pandey" style="font-size: 12px;">
+                                                        </div>
+                                                        <div class="mb-3">
+                                                            <label for="exampleFormControlInput2" class="form-label">Email
+                                                                Address</label>
+                                                            <input type="email" class="form-control" id="exampleFormControlInput2"
+                                                                placeholder="anush24aug@gmail.com" style="font-size: 12px;">
+                                                        </div>
+                                                        <div class="mb-3">
+                                                            <label for="exampleFormControlInput3"
+                                                                class="form-label">Password</label>
+                                                            <input type="password" class="form-control"
+                                                                id="exampleFormControlInput3" placeholder="pandey24anushka"
+                                                                style="font-size: 12px;">
+                                                        </div>
+                                                        <div class="mb-3">
+                                                            <label for="exampleFormControlInput4" class="form-label">Contact
+                                                                No.</label>
+                                                            <input type="text" class="form-control" id="exampleFormControlInput4"
+                                                                placeholder="+91 7394601284" style="font-size: 12px;">
+                                                        </div>
+                                                        <div class="mb-3">
+                                                            <label for="exampleFormControlTextarea1"
+                                                                class="form-label">Address</label>
+                                                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
+                                                                placeholder="301-D,Progiki,Sector-3,Dwarka,New Delhi, 110078" style="font-size: 12px;"></textarea>
+                                                        </div>
+                                                        <div class="mb-3">
+                                                            <label for="exampleFormControlInput5" class="form-label">Date of
+                                                                Birth</label>
+                                                            <input type="text" class="form-control" id="exampleFormControlInput5"
+                                                                placeholder="1992-07-21" style="font-size: 12px;">
+                                                        </div>
+                                                        <div class="mb-3">
+                                                            <label for="exampleFormControlInput6" class="form-label">Degree</label>
+                                                            <input type="text" class="form-control" id="exampleFormControlInput6"
+                                                                placeholder="MBBS" style="font-size: 12px;">
+                                                        </div>
+                                                        <div class="mb-3">
+                                                            <label for="exampleFormControlInput7"
+                                                                class="form-label">Speciality</label>
+                                                            <input type="text" class="form-control" id="exampleFormControlInput7"
+                                                                placeholder="General Physician" style="font-size: 12px;">
+                                                        </div>
+                                                        <div class="mb-3">
+                                                            <label for="formFile" class="form-label">Upload Image</label>
+                                                            <input class="form-control" type="file" id="formFile"
+                                                                style="font-size: 12px;">
+                                                        </div>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-secondary btn-sm"
+                                                            data-bs-dismiss="modal">Close</button>
+                                                        <button type="button" class="btn btn-primary btn-sm">Submit</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <button type="button" class="btn btn-danger btn-sm"><i
+                                                class="bi bi-x-circle-fill"></i></button>
+                                    </td>
+                                    <tr>
+                                        <td><img src="Lakshmi.jpg" class="card-img-top"
+                                                style="width: 40px;height: 40px;"></td>
+                                        <td>laxmiiyer@gmail.com</td>
+                                        <td>Lakshmi Iyer</td>
+                                        <td>+91 8564038967</td>
+                                        <td>Gynacologist</td>
+                                        <td>
+                                            <button type="button" class="btn btn-primary btn-sm">Active</button>
+                                        </td>
+                                        <td>
+                                            <button type="button" class="btn btn-info btn-sm" data-bs-toggle="modal"
+                                                data-bs-target="#staticBackdropdoc2">
+                                                <i class="bi bi-eye-slash"></i>
+                                            </button>
+
+                                            <!-- Modal -->
+                                            <div class="modal fade" id="staticBackdropdoc2" data-bs-backdrop="static"
+                                                data-bs-keyboard="false" tabindex="-1"
+                                                aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                                                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <h5 class="modal-title" id="staticBackdropLabel">Doctor
+                                                                Details
+                                                            </h5>
+                                                            <button type="button" class="btn-close"
+                                                                data-bs-dismiss="modal" aria-label="Close"></button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            <img src="Lakshmi.jpg" class="card-img-top" style="width: 100px;height: 100px; margin-bottom: 15px;">
+                                                            
+                                                            <table class="table table-borderless table-sm"
+                                                                style="text-align: left;">
+
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td>Doctor Name:</td>
+                                                                        <td>Lakshmi Iyer</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>Email address:</td>
+                                                                        <td>laxmiiyer@gmail.com</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>Phone no:</td>
+                                                                        <td>+91 8564038967</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>Date of Birth:</td>
+                                                                        <td>1989-01-26</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>Degree:</td>
+                                                                        <td>MBBS MD (Gynaec)</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>Speciality</td>
+                                                                        <td>Gynacologist</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>Salary</td>
+                                                                        <td>Rs.50,000</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>Days Available:</td>
+                                                                        <td>Thursday, Sunday</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>Appointments Pending:</td>
+                                                                        <td>5</td>
+                                                                    </tr>
+                                                                    
+                                                                    </tr>
+
+
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                        <div class="modal-footer">
+
+                                                            <button type="button"
+                                                                class="btn btn-danger btn-sm">Inactive</button>
+                                                            <button type="button" class="btn btn-secondary btn-sm"
+                                                                data-bs-dismiss="modal">Close</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <button type="button" class="btn btn-warning btn-sm" data-bs-toggle="modal"
+                                            data-bs-target="#staticBackdroppro">
+                                            <i
+                                            class="bi bi-pencil-square"></i></i>
+                                        </button>
+            
+                                        <!-- Modal -->
+                                        <div class="modal fade" id="staticBackdroppro" data-bs-backdrop="static"
+                                            data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel"
+                                            aria-hidden="true">
+                                            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title" id="staticBackdropLabel">Edit Details</h5>
+                                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                            aria-label="Close"></button>
+                                                    </div>
+                                                    <div class="modal-body"z style="text-align: left;">
+                                                        <div class="mb-3">
+                                                            <label for="exampleFormControlInput1" class="form-label">Name</label>
+                                                            <input type="text" class="form-control" id="exampleFormControlInput1"
+                                                                placeholder="Lakshmi Iyer" style="font-size: 12px;">
+                                                        </div>
+                                                        <div class="mb-3">
+                                                            <label for="exampleFormControlInput2" class="form-label">Email
+                                                                Address</label>
+                                                            <input type="email" class="form-control" id="exampleFormControlInput2"
+                                                                placeholder="laxmiiyer@gmail.com" style="font-size: 12px;">
+                                                        </div>
+                                                        <div class="mb-3">
+                                                            <label for="exampleFormControlInput3"
+                                                                class="form-label">Password</label>
+                                                            <input type="password" class="form-control"
+                                                                id="exampleFormControlInput3" placeholder="lkiyer_youheal"
+                                                                style="font-size: 12px;">
+                                                        </div>
+                                                        <div class="mb-3">
+                                                            <label for="exampleFormControlInput4" class="form-label">Contact
+                                                                No.</label>
+                                                            <input type="text" class="form-control" id="exampleFormControlInput4"
+                                                                placeholder="+91 8564038967" style="font-size: 12px;">
+                                                        </div>
+                                                        <div class="mb-3">
+                                                            <label for="exampleFormControlTextarea1"
+                                                                class="form-label">Address</label>
+                                                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
+                                                                placeholder="House No. 401,Hallet Towers,Vasant Kunj,New Delhi, 110051" style="font-size: 12px;"></textarea>
+                                                        </div>
+                                                        <div class="mb-3">
+                                                            <label for="exampleFormControlInput5" class="form-label">Date of
+                                                                Birth</label>
+                                                            <input type="text" class="form-control" id="exampleFormControlInput5"
+                                                                placeholder="1989-01-26" style="font-size: 12px;">
+                                                        </div>
+                                                        <div class="mb-3">
+                                                            <label for="exampleFormControlInput6" class="form-label">Degree</label>
+                                                            <input type="text" class="form-control" id="exampleFormControlInput6"
+                                                                placeholder="MBBS MD (Gynaec)" style="font-size: 12px;">
+                                                        </div>
+                                                        <div class="mb-3">
+                                                            <label for="exampleFormControlInput7"
+                                                                class="form-label">Speciality</label>
+                                                            <input type="text" class="form-control" id="exampleFormControlInput7"
+                                                                placeholder="Gynacologist" style="font-size: 12px;">
+                                                        </div>
+                                                        <div class="mb-3">
+                                                            <label for="formFile" class="form-label">Upload Image</label>
+                                                            <input class="form-control" type="file" id="formFile"
+                                                                style="font-size: 12px;">
+                                                        </div>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-secondary btn-sm"
+                                                            data-bs-dismiss="modal">Close</button>
+                                                        <button type="button" class="btn btn-primary btn-sm">Submit</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                            <button type="button" class="btn btn-danger btn-sm"><i
+                                                    class="bi bi-x-circle-fill"></i></button>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td><img src="dev.jpg" class="card-img-top" style="width: 40px;height: 40px;">
+                                        </td>
+                                        <td>dev29octk@gmail.com</td>
+                                        <td>Dev Kataria</td>
+                                        <td>+91 5783028513</td>
+                                        <td>Cardiology</td>
+                                        <td>
+                                            <button type="button" class="btn btn-primary btn-sm">Active</button>
+                                        </td>
+                                        <td>
+                                            <button type="button" class="btn btn-info btn-sm" data-bs-toggle="modal"
+                                                data-bs-target="#staticBackdropdoc3">
+                                                <i class="bi bi-eye-slash"></i>
+                                            </button>
+
+                                            <!-- Modal -->
+                                            <div class="modal fade" id="staticBackdropdoc3" data-bs-backdrop="static"
+                                                data-bs-keyboard="false" tabindex="-1"
+                                                aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                                                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <h5 class="modal-title" id="staticBackdropLabel">Doctor
+                                                                Details
+                                                            </h5>
+                                                            <button type="button" class="btn-close"
+                                                                data-bs-dismiss="modal" aria-label="Close"></button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            <img src="dev.jpg" class="card-img-top" style="width: 100px;height: 100px; margin-bottom: 15px;">
+                                                            
+                                                            <table class="table table-borderless table-sm"
+                                                                style="text-align: left;">
+
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td>Doctor Name:</td>
+                                                                        <td>Dev Kataria</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>Email address:</td>
+                                                                        <td>dev29octk@gmail.com</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>Phone no:</td>
+                                                                        <td>+91 5783028513</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>Date of Birth:</td>
+                                                                        <td>1987-10-29</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>Degree:</td>
+                                                                        <td>MBBS MD DM (Cardiac)</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>Speciality</td>
+                                                                        <td>Cardiology</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>Salary</td>
+                                                                        <td>Rs.1,00,000</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>Days Available:</td>
+                                                                        <td>Thursday, Friday</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>Appointments Pending:</td>
+                                                                        <td>9</td>
+                                                                    </tr>
+                                                                    
+                                                                    </tr>
+
+
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                        <div class="modal-footer">
+
+                                                            <button type="button"
+                                                                class="btn btn-danger btn-sm">Inactive</button>
+                                                            <button type="button" class="btn btn-secondary btn-sm"
+                                                                data-bs-dismiss="modal">Close</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <button type="button" class="btn btn-warning btn-sm" data-bs-toggle="modal"
+                                            data-bs-target="#staticBackdroppro1">
+                                            <i
+                                            class="bi bi-pencil-square"></i></i>
+                                        </button>
+            
+                                        <!-- Modal -->
+                                        <div class="modal fade" id="staticBackdroppro1" data-bs-backdrop="static"
+                                            data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel"
+                                            aria-hidden="true">
+                                            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title" id="staticBackdropLabel">Edit Details</h5>
+                                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                            aria-label="Close"></button>
+                                                    </div>
+                                                    <div class="modal-body"z style="text-align: left;">
+                                                        <div class="mb-3">
+                                                            <label for="exampleFormControlInput1" class="form-label">Name</label>
+                                                            <input type="text" class="form-control" id="exampleFormControlInput1"
+                                                                placeholder="Dev Kataria" style="font-size: 12px;">
+                                                        </div>
+                                                        <div class="mb-3">
+                                                            <label for="exampleFormControlInput2" class="form-label">Email
+                                                                Address</label>
+                                                            <input type="email" class="form-control" id="exampleFormControlInput2"
+                                                                placeholder="dev29octk@gmail.com" style="font-size: 12px;">
+                                                        </div>
+                                                        <div class="mb-3">
+                                                            <label for="exampleFormControlInput3"
+                                                                class="form-label">Password</label>
+                                                            <input type="password" class="form-control"
+                                                                id="exampleFormControlInput3" placeholder="devok29oct"
+                                                                style="font-size: 12px;">
+                                                        </div>
+                                                        <div class="mb-3">
+                                                            <label for="exampleFormControlInput4" class="form-label">Contact
+                                                                No.</label>
+                                                            <input type="text" class="form-control" id="exampleFormControlInput4"
+                                                                placeholder="+91 5783028513" style="font-size: 12px;">
+                                                        </div>
+                                                        <div class="mb-3">
+                                                            <label for="exampleFormControlTextarea1"
+                                                                class="form-label">Address</label>
+                                                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
+                                                                placeholder="House No. 401,Block-A,Sonipat,Haryana, 110043" style="font-size: 12px;"></textarea>
+                                                        </div>
+                                                        <div class="mb-3">
+                                                            <label for="exampleFormControlInput5" class="form-label">Date of
+                                                                Birth</label>
+                                                            <input type="text" class="form-control" id="exampleFormControlInput5"
+                                                                placeholder="1987-10-29" style="font-size: 12px;">
+                                                        </div>
+                                                        <div class="mb-3">
+                                                            <label for="exampleFormControlInput6" class="form-label">Degree</label>
+                                                            <input type="text" class="form-control" id="exampleFormControlInput6"
+                                                                placeholder="MBBS MD DM(Cardiac)" style="font-size: 12px;">
+                                                        </div>
+                                                        <div class="mb-3">
+                                                            <label for="exampleFormControlInput7"
+                                                                class="form-label">Speciality</label>
+                                                            <input type="text" class="form-control" id="exampleFormControlInput7"
+                                                                placeholder="Cardiology" style="font-size: 12px;">
+                                                        </div>
+                                                        <div class="mb-3">
+                                                            <label for="formFile" class="form-label">Upload Image</label>
+                                                            <input class="form-control" type="file" id="formFile"
+                                                                style="font-size: 12px;">
+                                                        </div>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-secondary btn-sm"
+                                                            data-bs-dismiss="modal">Close</button>
+                                                        <button type="button" class="btn btn-primary btn-sm">Submit</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                            <button type="button" class="btn btn-danger btn-sm"><i
+                                                    class="bi bi-x-circle-fill"></i></button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><img src="rahul.jpg" class="card-img-top" style="width: 40px;height: 40px;">
+                                        </td>
+                                        <td>rahulpraj@gmail.com</td>
+                                        <td>Rahul Prajapati</td>
+                                        <td>+91 9305824817</td>
+                                        <td>Neurosurgery</td>
+                                        <td>
+                                            <button type="button" class="btn btn-secondary btn-sm">Inactive</button>
+                                        </td>
+                                        <td>
+                                            <button type="button" class="btn btn-info btn-sm"><i
+                                                    class="bi bi-eye-slash"></i></button>
+                                            <button type="button" class="btn btn-warning btn-sm"><i
+                                                    class="bi bi-pencil-square"></i></button>
+                                            <button type="button" class="btn btn-danger btn-sm"><i
+                                                    class="bi bi-x-circle-fill"></i></button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><img src="shiva.jpg" class="card-img-top" style="width: 40px;height: 40px;">
+                                        </td>
+                                        <td>shivas@gmail.com</td>
+                                        <td>Shivaditya Singh</td>
+                                        <td>+91 9105823214</td>
+                                        <td>General Physician</td>
+                                        <td>
+                                            <button type="button" class="btn btn-primary btn-sm">Active</button>
+                                        </td>
+                                        <td>
+                                            <button type="button" class="btn btn-info btn-sm"><i
+                                                    class="bi bi-eye-slash"></i></button>
+                                            <button type="button" class="btn btn-warning btn-sm"><i
+                                                    class="bi bi-pencil-square"></i></button>
+                                            <button type="button" class="btn btn-danger btn-sm"><i
+                                                    class="bi bi-x-circle-fill"></i></button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><img src="anuj.jpg" class="card-img-top" style="width: 40px;height: 40px;">
+                                        </td>
+                                        <td>rastogi@gmail.com</td>
+                                        <td>Anuj Rastogi</td>
+                                        <td>+91 3941099347</td>
+                                        <td>Anesthesiologist</td>
+                                        <td>
+                                            <button type="button" class="btn btn-primary btn-sm">Active</button>
+                                        </td>
+                                        <td>
+                                            <button type="button" class="btn btn-info btn-sm"><i
+                                                    class="bi bi-eye-slash"></i></button>
+                                            <button type="button" class="btn btn-warning btn-sm"><i
+                                                    class="bi bi-pencil-square"></i></button>
+                                            <button type="button" class="btn btn-danger btn-sm"><i
+                                                    class="bi bi-x-circle-fill"></i></button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><img src="anchal.jpg" class="card-img-top"
+                                                style="width: 40px;height: 40px;"></td>
+                                        <td>tibreanchal@gmail.com</td>
+                                        <td>Anchal Tibrewali</td>
+                                        <td>+91 9415355581</td>
+                                        <td>Cardiology</td>
+                                        <td>
+                                            <button type="button" class="btn btn-primary btn-sm">Active</button>
+                                        </td>
+                                        <td>
+                                            <button type="button" class="btn btn-info btn-sm"><i
+                                                    class="bi bi-eye-slash"></i></button>
+                                            <button type="button" class="btn btn-warning btn-sm"><i
+                                                    class="bi bi-pencil-square"></i></button>
+                                            <button type="button" class="btn btn-danger btn-sm"><i
+                                                    class="bi bi-x-circle-fill"></i></button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><img src="malvika.jpg" class="card-img-top"
+                                                style="width: 40px;height: 40px;"></td>
+                                        <td>malprem@gmail.com</td>
+                                        <td>Malvika Prem</td>
+                                        <td>+91 9942037194</td>
+                                        <td>Neurosurgery</td>
+                                        <td>
+                                            <button type="button" class="btn btn-secondary btn-sm">Inactive</button>
+                                        </td>
+                                        <td>
+                                            <button type="button" class="btn btn-info btn-sm"><i
+                                                    class="bi bi-eye-slash"></i></button>
+                                            <button type="button" class="btn btn-warning btn-sm"><i
+                                                    class="bi bi-pencil-square"></i></button>
+                                            <button type="button" class="btn btn-danger btn-sm"><i
+                                                    class="bi bi-x-circle-fill"></i></button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><img src="anu.jpg" class="card-img-top" style="width: 40px;height: 40px;">
+                                        </td>
+                                        <td>sainianu@gmail.com</td>
+                                        <td>Anu Saini</td>
+                                        <td>+91 88374012554</td>
+                                        <td>Gynacologist</td>
+                                        <td>
+                                            <button type="button" class="btn btn-secondary btn-sm">Inactive</button>
+                                        </td>
+                                        <td>
+                                            <button type="button" class="btn btn-info btn-sm"><i
+                                                    class="bi bi-eye-slash"></i></button>
+                                            <button type="button" class="btn btn-warning btn-sm"><i
+                                                    class="bi bi-pencil-square"></i></button>
+                                            <button type="button" class="btn btn-danger btn-sm"><i
+                                                    class="bi bi-x-circle-fill"></i></button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="footer">
+                            <p class="showing"
+                                style="font-size: 15px; margin-top: -17px; text-align: left; margin-left: 15px;">Showing
+                                10 of 18 entries</p>
+                            <div class="footer-buttons" style="float: right;margin-top: -40px;margin-right: 15px;">
+                                <div class="btn-group" role="group" aria-label="Basic example">
+                                    <button type="button" class="btn btn-secondary btn-sm">Previous</button>
+                                    <button type="button" class="btn btn-primary btn-sm">1</button>
+                                    <button type="button" class="btn btn-secondary btn-sm">Next</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div><br>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    -->
+
+</body>
+
+</html>
